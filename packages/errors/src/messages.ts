@@ -154,6 +154,7 @@ import {
     SOLANA_ERROR__SIGNER__EXPECTED_TRANSACTION_SIGNER,
     SOLANA_ERROR__SIGNER__TRANSACTION_CANNOT_HAVE_MULTIPLE_SENDING_SIGNERS,
     SOLANA_ERROR__SIGNER__TRANSACTION_SENDING_SIGNER_MISSING,
+    SOLANA_ERROR__SIGNER__WALLET_MULTISIGN_UNIMPLEMENTED,
     SOLANA_ERROR__SUBTLE_CRYPTO__DIGEST_UNIMPLEMENTED,
     SOLANA_ERROR__SUBTLE_CRYPTO__DISALLOWED_IN_INSECURE_CONTEXT,
     SOLANA_ERROR__SUBTLE_CRYPTO__ED25519_ALGORITHM_UNIMPLEMENTED,
@@ -481,13 +482,15 @@ export const SolanaErrorMessages: Readonly<{
     [SOLANA_ERROR__SIGNER__TRANSACTION_SENDING_SIGNER_MISSING]:
         'No `TransactionSendingSigner` was identified. Please provide a valid ' +
         '`ITransactionWithSingleSendingSigner` transaction.',
+    [SOLANA_ERROR__SIGNER__WALLET_MULTISIGN_UNIMPLEMENTED]:
+        'Wallet account signers do not support signing multiple messages/transactions in a single operation',
     [SOLANA_ERROR__SUBTLE_CRYPTO__DIGEST_UNIMPLEMENTED]: 'No digest implementation could be found.',
     [SOLANA_ERROR__SUBTLE_CRYPTO__DISALLOWED_IN_INSECURE_CONTEXT]:
         'Cryptographic operations are only allowed in secure browser contexts. Read more ' +
         'here: https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts.',
     [SOLANA_ERROR__SUBTLE_CRYPTO__ED25519_ALGORITHM_UNIMPLEMENTED]:
-        'This runtime does not support the generation of Ed25519 key pairs.\n\nInstall and ' +
-        'import `@solana/webcrypto-ed25519-polyfill` before generating keys in ' +
+        'This runtime does not support the generation of Ed25519 key pairs.\n\nInstall ' +
+        '@solana/webcrypto-ed25519-polyfill and call its `install` function before generating keys in ' +
         'environments that do not support Ed25519.\n\nFor a list of runtimes that ' +
         'currently support Ed25519 operations, visit ' +
         'https://github.com/WICG/webcrypto-secure-curves/issues/20.',

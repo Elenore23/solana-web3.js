@@ -1,6 +1,6 @@
 {
     "name": "@solana/rpc-graphql",
-    "version": "2.0.0-preview.3",
+    "version": "2.0.0-preview.4",
     "description": "A library for resolving GraphQl query calls to the Solana JSON RPC API",
     "exports": {
         "browser": {
@@ -67,7 +67,7 @@
         "@solana/codecs-strings": "workspace:*",
         "@solana/fast-stable-stringify": "workspace:*",
         "dataloader": "^2.2.2",
-        "graphql": "^16.8.0"
+        "graphql": "^16.9.0"
     },
     "devDependencies": {
         "@solana/addresses": "workspace:*",
