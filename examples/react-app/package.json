@@ -19,7 +19,7 @@
         "@wallet-standard/core": "1.1.0",
         "@wallet-standard/react": "pre",
         "react": "^18.3.0",
-        "react-dom": "^18.3.0",
+        "react-dom": "^19.0.0",
         "react-error-boundary": "^4.0.13",
         "swr": "^2.2.5"
     },
